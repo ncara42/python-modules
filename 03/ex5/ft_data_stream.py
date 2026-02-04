@@ -21,6 +21,19 @@ def fibonacci_gen(n):
         yield a
         a, b = b, a + b
 
+def prime_gen(n):
+    count, num = 0, 2
+    while count < n:
+        is_prime = True
+        for i in range(2, int(num**0.5) + 1):
+            if num % i == 0:
+                is_prime = False
+                break
+        if is_prime:
+            yield num
+            count += 1
+        num += 1
+
 def main() -> None:
     print("=== Game Data Stream Processor ===")
 
@@ -55,12 +68,19 @@ def main() -> None:
     print("\n=== Generator Demonstration ===")
 
     fib_stream = fibonacci_gen(10)
-    it = iter(fib_stream)
-    res = str(next(it))
-    for val in it:
-        res += ", " + str(val)
+    
+    print(f"Fibonacci sequence (first 10):", end=" ")
+    print(next(fib_stream), end="")
+    for val in fib_stream:
+        print(", ", val, end="", sep="")
 
-    print(f"Fibonacci sequence (first 10): {res}")
+    print(f"\nPrime numbers (first 5):", end=" ")
+    prime = prime_gen(5)
+    print(next(prime), end="")
+    for val in prime:
+        print(", ", val, end="", sep="")
+    print()
+    
 
 if __name__ == "__main__":
     main()
