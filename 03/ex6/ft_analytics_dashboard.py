@@ -18,11 +18,11 @@ def main() -> None:
 
     high_scorers = [name for name, info in players.items() if info['score'] > 2000]
     doubled = [info['score'] * 2 for info in players.values()]
-    active = [active for active, info in players.items() if info['active'] == True]
+    active_players = [active for active, info in players.items() if info['active'] == True]
 
     print(f"High scores (>2000) {high_scorers}")
     print(f"Scores doubled: {doubled}")
-    print(f"Active players: {active}")
+    print(f"Active players: {active_players}")
 
     print("\n=== Dict Comprehension Examples ===")
     scores = {name: info['score'] for name, info in players.items()}
@@ -34,9 +34,9 @@ def main() -> None:
     print(f"achievement counts: {number_achievements}")
 
     print("\n=== Set Comprehension Examples ===")
-    unique_players = sorted(set(players))
-    unique_achievements = set(achievements)
-    active_regions = set(regions)
+    unique_players = {a for a in players}
+    unique_achievements = {a for a in achievements}
+    active_regions = {a for a in regions}
     print(f"Unique players: {unique_players}")
     print(f"Unique achievements: {unique_achievements}")
     print(f"Active regions: {active_regions}")
@@ -44,7 +44,7 @@ def main() -> None:
     print("\n=== Combined Analysis ===")
     average_score = [av['score'] for av in players.values()]
     print(f"Total players: {len(players)}")
-    print(f"Total unique achievements: {len(achievements)}")
+    print(f"Total unique achievements: {len(unique_achievements)}")
     print(f"Average score: {sum(average_score) / len(players)}")
     top = max(players, key=lambda name: players[name]['score'])
     print(f"Top performer: {top} ({players[top]['score']} points, {players[top]['achievements']} achievements)")
