@@ -1,12 +1,13 @@
-"""Docstrings"""
+"""Module for game analytics and comprehension demonstrations."""
+
 
 def main() -> None:
+    """Execute analytics dashboard using various Python comprehensions."""
     print("=== Game Analytics Dashboard ===")
 
     print("\n=== List Comprehension Examples ===")
 
-    players = {
-
+    players: dict[str, dict[str, int | bool]] = {
         "alice": {"score": 2300, "achievements": 5, "active": True},
         "bob": {"score": 1800, "achievements": 3, "active": True},
         "charlie": {"score": 2150, "achievements": 7, "active": True},
@@ -16,22 +17,25 @@ def main() -> None:
     achievements = ["first_kill", "level_10", "boss_slayer", "first_kill"]
     regions = ["north", "east", "central"]
 
-    high_scorers = [name for name, info in players.items() if info['score'] > 2000]
-    doubled = [info['score'] * 2 for info in players.values()]
-    active_players = [active for active, info in players.items() if info['active'] == True]
+    high_scorers = [n for n, i in players.items() if i['score'] > 2000]
+    doubled = [i['score'] * 2 for i in players.values()]
+    active_players = [p for p, i in players.items() if i['active']]
 
     print(f"High scores (>2000) {high_scorers}")
     print(f"Scores doubled: {doubled}")
     print(f"Active players: {active_players}")
 
     print("\n=== Dict Comprehension Examples ===")
-    scores = {name: info['score'] for name, info in players.items()}
-    level = {name: "pro" if info['score'] > 2100 else "noob" for name, info in players.items()}
-    number_achievements = {name: info['achievements'] for name, info in players.items()}
+    scores = {n: i['score'] for n, i in players.items()}
+    level = {
+        n: "pro" if i['score'] > 2100 else "noob"
+        for n, i in players.items()
+    }
+    num_achievs = {n: i['achievements'] for n, i in players.items()}
 
     print(f"Player scores: {scores}")
-    print(f"Score caregories: {level}")
-    print(f"achievement counts: {number_achievements}")
+    print(f"Score categories: {level}")
+    print(f"achievement counts: {num_achievs}")
 
     print("\n=== Set Comprehension Examples ===")
     unique_players = {a for a in players}
@@ -42,12 +46,15 @@ def main() -> None:
     print(f"Active regions: {active_regions}")
 
     print("\n=== Combined Analysis ===")
-    average_score = [av['score'] for av in players.values()]
+    score_list = [av['score'] for av in players.values()]
+    template: str = "Top performer: {} ({} points, {} achievements)"
     print(f"Total players: {len(players)}")
     print(f"Total unique achievements: {len(unique_achievements)}")
-    print(f"Average score: {sum(average_score) / len(players)}")
+    print(f"Average score: {sum(score_list) / len(players)}")
     top = max(players, key=lambda name: players[name]['score'])
-    print(f"Top performer: {top} ({players[top]['score']} points, {players[top]['achievements']} achievements)")
+    print(template.format(
+        top, players[top]['score'], players[top]['achievements']
+    ))
 
 
 if __name__ == "__main__":
