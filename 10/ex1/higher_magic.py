@@ -1,7 +1,7 @@
 from typing import Callable, Any
 
 
-def spell_combiner(spell1: Callable, spell2: Callable) -> Callable:
+def spell_combiner(spell1: Callable, spell2: Callable) -> Callable[..., Any]:
     return lambda *args: (spell1(*args), spell2(*args))
 
 
@@ -13,7 +13,7 @@ def conditional_caster(condition: Callable, spell: Callable) -> Callable:
     return lambda *args: spell(*args) if condition(*args) else "Spell fizzled"
 
 
-def spell_sequence(spells: list[spell]) -> Callable[..., list[int]]:
+def spell_sequence(spells: list[Callable[..., int]]) -> Callable[..., list[int]]:
     return lambda *args: [spell(*args) for spell in spells]
 
 
