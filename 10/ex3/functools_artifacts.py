@@ -59,7 +59,7 @@ def spell_dispatcher() -> Callable[[Any], str]:
 def main():
     spells = [2, 3, 5, 7]
     print("Testing spell reducer...")
-    print("Sum:", spell_reducer(spells, "add"))  
+    print("Sum:", spell_reducer(spells, "add"))
     print("Product:", spell_reducer(spells, "multiply"))
     print("Max:", spell_reducer(spells, "max"))
     print("Min:", spell_reducer(spells, "min"))

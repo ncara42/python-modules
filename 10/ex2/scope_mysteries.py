@@ -1,7 +1,9 @@
 from typing import Callable, Any
 
+
 def mage_counter() -> Callable[[], int]:
     counter = 0
+
     def incrementer():
         nonlocal counter
         counter += 1
@@ -12,6 +14,7 @@ def mage_counter() -> Callable[[], int]:
 def spell_accumulator(initial_power: int) -> Callable[[], int]:
     step = initial_power
     total = 0
+
     def incrementer():
         nonlocal total
         total += step
@@ -20,15 +23,18 @@ def spell_accumulator(initial_power: int) -> Callable[[], int]:
 
 
 def enchantment_factory(enchantment_type: str) -> Callable[[str], str]:
+
     def concatenate(item_name: str) -> str:
-        return f"{enchantment_type} {item_name}"  
+        return f"{enchantment_type} {item_name}"
     return concatenate
 
 
 def memory_vault() -> dict[str, Callable[..., Any]]:
     memory: dict[str, Any] = {}
+
     def store(key: str, value: Any) -> None:
         memory[key] = value
+
     def recall(key: str) -> Any:
         return memory.get(key, "Memory not found")
     return {'store': store, 'recall': recall}
@@ -40,7 +46,7 @@ def main() -> None:
 
     for i in range(1, 4):
         print(f"Call {i}: {mage()}")
-    
+
     print("\nTesting mage counter...")
     spell = spell_accumulator(15)
 

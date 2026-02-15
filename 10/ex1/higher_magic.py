@@ -13,7 +13,8 @@ def conditional_caster(condition: Callable, spell: Callable) -> Callable:
     return lambda *args: spell(*args) if condition(*args) else "Spell fizzled"
 
 
-def spell_sequence(spells: list[Callable[..., int]]) -> Callable[..., list[int]]:
+def spell_sequence(spells: list[Callable[..., int]]) \
+                   -> Callable[..., list[int]]:
     return lambda *args: [spell(*args) for spell in spells]
 
 
@@ -40,7 +41,8 @@ def main():
     print(amplified(5, 1))
 
     print("\nTesting conditional caster...")
-    casted: Callable[..., tuple[int, int]]  = conditional_caster(cast_spell, spell2)
+    casted: Callable[..., tuple[int, int]] \
+        = conditional_caster(cast_spell, spell2)
     print(casted(55))
 
     print("\nTesting spell sequence...")
