@@ -152,7 +152,7 @@ class OutputStage():
         return "Pipeline C"
 
 
-def main():
+def main() -> None:
     """Main execution entry point for the Enterprise Pipeline System."""
     print("=== CODE NEXUS - ENTERPRISE PIPELINE SYSTEM ===")
 
