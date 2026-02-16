@@ -1,8 +1,11 @@
+"""Module demonstrating how to avoid circular dependency issues using late imports."""
+
 from alchemy.grimoire.validator import validate_ingredients
 from alchemy.grimoire.spellbook import record_spell
 
 
-def main():
+def main() -> None:
+    """Demonstrate circular dependency resolution with late imports."""
     print("=== Circular Curse Breaking ===")
 
     print("\nTesting ingredient validation:")

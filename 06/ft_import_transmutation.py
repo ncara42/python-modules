@@ -1,3 +1,5 @@
+"""Module demonstrating various Python import methods and techniques."""
+
 import alchemy
 from alchemy.elements import create_water
 from alchemy.potions import healing_potion as heal
@@ -5,7 +7,8 @@ from alchemy.elements import create_fire, create_earth
 from alchemy.potions import strength_potion
 
 
-def main():
+def main() -> None:
+    """Demonstrate different import methods: full module, specific, aliased, and multiple."""
     print("=== Import Transmutation Mastery ===")
 
     print("\nMethod 1 - Full module import:")

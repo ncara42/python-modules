@@ -1,9 +1,12 @@
+"""Module demonstrating differences between absolute and relative imports."""
+
 from alchemy.transmutation.basic import lead_to_gold, stone_to_gem
 from alchemy.transmutation.advanced import philosopers_stone, elixir_of_life
 import alchemy.transmutation
 
 
-def main():
+def main() -> None:
+    """Demonstrate absolute imports, relative imports, and package access."""
     print("=== Pathway Debate Mastery ===")
 
     print("\nTesting Absolute Imports (from basic.py):")

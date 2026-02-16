@@ -1,7 +1,10 @@
+"""Module demonstrating package-level access and __init__.py control."""
+
 import alchemy
 
 
-def main():
+def main() -> None:
+    """Demonstrate direct module access vs package-level access controlled by __init__.py."""
     print("=== Sacred Scroll Mastery ===")
 
     print("\nTesting direct module access:")
