@@ -76,6 +76,7 @@ class SensorStream(DataStream):
         return data_batch
 
     def get_stats(self) -> Dict[str, Union[str, int, float]]:
+        """Return a dictionary containing stream statistics."""
         stats: Dict[str, Union[str, int, float]] = {
             "id": self.stream_id,
             "type": "Sensor",
@@ -88,6 +89,7 @@ class SensorStream(DataStream):
         return stats
 
     def get_analysis(self) -> str:
+        """Provide a detailed textual analysis of sensor data."""
         template = "Sensor analysis: {} readings processed, avg temp: {}ºC"
         return template.format(self.ops, self.avg)
 
@@ -126,6 +128,7 @@ class TransactionStream(DataStream):
         return data_batch
 
     def get_stats(self) -> Dict[str, Union[str, int, float]]:
+        """Return a dictionary containing stream statistics."""
         stats: Dict[str, Union[str, int, float]] = {
             "id": self.stream_id,
             "type": "Transaction",
@@ -138,6 +141,7 @@ class TransactionStream(DataStream):
         return stats
 
     def get_analysis(self) -> str:
+        """Provide a detailed textual analysis of transaction data."""
         template = "Transaction analysis: {} operations, net flow: {} units"
         return template.format(self.ops, self.sum)
 
@@ -168,6 +172,7 @@ class EventStream(DataStream):
         return data_batch
 
     def get_stats(self) -> Dict[str, Union[str, int, float]]:
+        """Return a dictionary containing stream statistics."""
         stats: Dict[str, Union[str, int, float]] = {
             "id": self.stream_id,
             "type": "Event",
@@ -180,6 +185,7 @@ class EventStream(DataStream):
         return stats
 
     def get_analysis(self) -> str:
+        """Provide a detailed textual analysis of event data."""
         template = "Event analysis: {} events, {} {} detected"
         return template.format(self.ops, self.errors, self.msg)
 
@@ -235,6 +241,7 @@ class StreamProcess():
 
 
 def main() -> None:
+    """Main entry point for the polymorphic stream system."""
     print("=== CODE NEXUS - POLYMORPHIC STREAM SYSTEM ===")
 
     s = SensorStream("SENSOR_001")

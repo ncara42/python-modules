@@ -11,6 +11,7 @@ class Plant:
         self.age = age
 
     def show(self) -> None:
+        """Display plant information (base implementation, to be overridden)."""
         pass
 
 
@@ -27,6 +28,7 @@ class Flower(Plant):
         print(f"{self.name} is blooming beautifully!\n")
 
     def show_info(self) -> None:
+        """Display detailed information about this flower including its bloom status."""
         print(f"{self.name} ({__class__.__name__}): {self.height}cm, {self.age} days, {self.color} color")
         self.bloom()
 
@@ -45,6 +47,7 @@ class Tree(Plant):
               f"square meters of shade\n")
 
     def show_info(self) -> None:
+        """Display detailed information about this tree including shade coverage."""
         print(f"{self.name} ({__class__.__name__}): {self.height}cm, {self.age} days, {self.trunk_diameter}cm diameter")
         self.produce_shade()
 
@@ -63,6 +66,7 @@ class Vegetable(Plant):
         print(f"{self.name} is rich in vitamin {self.nutritional_value}\n")
 
     def show_info(self) -> None:
+        """Display detailed information about this vegetable including nutritional value."""
         print(f"{self.name} ({__class__.__name__}): {self.height}cm, {self.age} days, {self.harvest_season} harvest")
         self.show_nutrition()
 

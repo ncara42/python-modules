@@ -9,7 +9,7 @@ class Plant:
         self.name = name
         self.height = height
 
-    d
+
 class FloweringPlant(Plant):
     """Class representing a plant that produces flowers."""
 

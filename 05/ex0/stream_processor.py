@@ -9,6 +9,7 @@ from typing import Any, Dict, Union, List, Generator
 
 
 class ValidationError(Exception):
+    """Custom exception for data validation errors."""
     pass
 
 
@@ -207,7 +208,7 @@ class AllProcessor():
             yield proc.final_output(i)
 
 
-def main():
+def main() -> None:
     """
     Main entry point for the Code Nexus diagnostic program.
     """

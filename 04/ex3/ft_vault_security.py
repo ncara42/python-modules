@@ -1,7 +1,7 @@
 """Module for secure vault access and security logging."""
 
 
-def main():
+def main() -> None:
     """
     Manages secure data extraction and archival.
     

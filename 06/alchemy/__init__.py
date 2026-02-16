@@ -1,3 +1,5 @@
+"""Alchemy package initialization module."""
+
 from .elements import create_water, create_fire
 
 __all__ = ['create_water', 'create_fire']
