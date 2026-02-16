@@ -1,7 +1,7 @@
 """Module for archiving and preserving digital entries"""
 
 
-def main():
+def main() -> None:
     """
     Main entry point for the preservation system.
     

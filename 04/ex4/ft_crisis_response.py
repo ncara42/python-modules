@@ -1,7 +1,7 @@
 """Module for managing automated crisis response and archive recovery"""
 
 
-def main():
+def main() -> None:
     """
     Simulates a crisis response system for digital archives.
     

@@ -1,7 +1,7 @@
 """Module for validating agricultural temperature data streams."""
 
 
-def check_temperature(temp) -> int | None:
+def check_temperature(temp: str) -> int | None:
     """
     Validates if a temperature string is a number
     and within safe plant ranges (0-40°C).

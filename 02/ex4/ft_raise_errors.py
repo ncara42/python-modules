@@ -1,7 +1,7 @@
 """Module for validating plant health parameters using raise statements."""
 
 
-def check_plant_health(plant_name, water_level: int,
+def check_plant_health(plant_name: str, water_level: int,
                        sunlight_hours: int) -> None:
     """
     Validates plant data and raises ValueError if parameters are out of range.

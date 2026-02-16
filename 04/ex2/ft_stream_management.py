@@ -4,7 +4,7 @@
 import sys
 
 
-def main():
+def main() -> None:
     """
     Handles archivist status reporting.
     
