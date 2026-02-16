@@ -7,11 +7,7 @@ It generates a visualization of the analysis and saves it as an image file.
 import importlib
 
 
-def analyze_and_visualize():
-    import pandas as pd
-    import numpy as np
-    import matplotlib.pyplot as plt
-    import requests
+def analyze_and_visualize() -> None:
     """
     Performs matrix data analysis and generates a visualization.
 
@@ -21,6 +17,10 @@ def analyze_and_visualize():
     the sine and squared sine values, and saves the plot
     as an image file named 'matrix_analysis.png'.
     """
+    import pandas as pd
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import requests
     print("\nFetching Matrix data from API (simulated)...")
     # Simulation with request
     try:
@@ -56,7 +56,7 @@ def analyze_and_visualize():
     print(f"Results saved to: {output}")
 
 
-def main():
+def main() -> None:
     """
     Checks the availability of required Python
     dependencies and prints their status.

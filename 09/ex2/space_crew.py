@@ -78,10 +78,13 @@ class SpaceMission(BaseModel):
     budget_millions: float = Field(ge=1.0, le=10000.0)
 
     @model_validator(mode="after")
-    def validate_model(self):
+    def validate_model(self) -> 'SpaceMission':
         """
         Performs cross-field validation to ensure mission integrity
         and compliance with business rules.
+        
+        Returns:
+            The validated model instance
         """
         if not self.mission_id.startswith("M"):
             raise ValueError("Mission ID must start with 'M'")
@@ -98,7 +101,7 @@ class SpaceMission(BaseModel):
         return self
 
 
-def main():
+def main() -> None:
     """
     Entry point of the program.
 

@@ -51,9 +51,12 @@ class ModelValidator(BaseModel):
     is_verified: bool = Field(default=False)
 
     @model_validator(mode="after")
-    def validate_model(self):
+    def validate_model(self) -> 'ModelValidator':
         """
         Performs cross-field validation to enforce business rules.
+        
+        Returns:
+            The validated model instance
         """
         if not self.contact_id.startswith("AC"):
             raise ValueError("Hola")
@@ -67,7 +70,7 @@ class ModelValidator(BaseModel):
         return self
 
 
-def main():
+def main() -> None:
     """
     Entry point of the program.
 

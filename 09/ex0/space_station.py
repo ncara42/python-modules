@@ -1,3 +1,5 @@
+"""Module for validating space station data using Pydantic models."""
+
 from pydantic import BaseModel, Field
 from datetime import datetime
 from typing import Optional
@@ -29,7 +31,7 @@ class SpaceStation(BaseModel):
     notes: Optional[str] = Field(None, max_length=200)
 
 
-def main():
+def main() -> None:
     """
     Demonstrates the validation of space station data.
 

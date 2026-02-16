@@ -1,3 +1,5 @@
+"""Module for reading and validating environment variables for Matrix operations."""
+
 import os
 try:
     from dotenv import load_dotenv
@@ -10,7 +12,8 @@ file = ".env"
 load_dotenv(file)
 
 
-def main():
+def main() -> None:
+    """Load and validate Matrix configuration from environment variables."""
     matrix_mode = os.getenv("MATRIX_MODE", "production")
     database_url = os.getenv("DATABASE_URL", "None")
     api_key = os.getenv("API_KEY", "None")
