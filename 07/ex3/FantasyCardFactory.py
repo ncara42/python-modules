@@ -30,7 +30,7 @@ class FantasyCardFactory(CardFactory):
         super().__init__()
         self.cards_created: int = 0
 
-    def create_creature(self, name_or_power) -> CreatureCard | None:
+    def create_creature(self, name_or_power: str | int) -> CreatureCard | None:
         """
         Crea una carta de criatura basada en un nombre o un nivel de poder.
 
@@ -57,7 +57,7 @@ class FantasyCardFactory(CardFactory):
         else:
             return None
 
-    def create_spell(self, name_or_power):
+    def create_spell(self, name_or_power: str | int) -> SpellCard | None:
         """
         Crea una carta de hechizo basada en un nombre o un nivel de poder.
 
@@ -75,7 +75,7 @@ class FantasyCardFactory(CardFactory):
                 Rarity.RARE.value, EffectType.DAMAGE.value
             )
 
-    def create_artifact(self, name_or_power) -> Optional[ArtifactCard]:
+    def create_artifact(self, name_or_power: str | int) -> Optional[ArtifactCard]:
         """
         Crea una carta de artefacto basada en un nombre.
 

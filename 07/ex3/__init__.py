@@ -1,3 +1,5 @@
+"""Module for ex3 package containing game engine, factories and strategies."""
+
 from .FantasyCardFactory import FantasyCardFactory
 from .GameEngine import GameEngine
 from .AggressiveStrategy import AggressiveStrategy

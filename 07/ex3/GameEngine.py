@@ -22,7 +22,7 @@ class GameEngine:
         self.strategy: GameStrategy | None = None
         self.total_turns_simulated: int = 0
 
-    def configure_engine(self, factory, strategy) -> None:
+    def configure_engine(self, factory: FantasyCardFactory, strategy: GameStrategy) -> None:
         """
         Configura el motor del juego con una fábrica
         de cartas y una estrategia.

@@ -71,7 +71,7 @@ class TournamentCard(Card, Combatable, Rankable):
             'effect': "Magical effect"
         }
 
-    def attack(self, target: str):
+    def attack(self, target: str) -> dict:
         """
         Realiza un ataque contra un objetivo.
 
@@ -106,7 +106,7 @@ class TournamentCard(Card, Combatable, Rankable):
             "still_alive": alive
         }
 
-    def get_combat_stats(self):
+    def get_combat_stats(self) -> dict:
         """
         Devuelve las estadísticas de combate de la carta.
 

@@ -1,3 +1,5 @@
+"""Module defining the Deck class for managing card collections in DataDeck."""
+
 from ex0 import Card
 from ex1.SpellCard import SpellCard
 from ex1.ArtifactCard import ArtifactCard

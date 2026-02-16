@@ -1,8 +1,11 @@
+"""Module defining the SpellCard class and EffectType enum for spell cards in DataDeck."""
+
 from ex0.Card import Card
 from enum import Enum
 
 
 class EffectType(Enum):
+    """Enumeration of possible spell effect types."""
     DAMAGE = "damage"
     HEAL = "heal"
     BUFF = "buff"

@@ -8,7 +8,7 @@ from ex3.AggressiveStrategy import AggressiveStrategy
 from ex3.GameEngine import GameEngine
 
 
-def main():
+def main() -> None:
     """
     Función principal que configura y ejecuta el motor del juego.
     Simula un turno utilizando la estrategia

@@ -12,7 +12,7 @@ class Combatable(ABC):
     """
 
     @abstractmethod
-    def attack(self, target) -> dict:
+    def attack(self, target: str) -> dict:
         """
         Realiza un ataque a un objetivo.
 

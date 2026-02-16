@@ -1,3 +1,5 @@
+"""Module defining the abstract Card class for the DataDeck system."""
+
 from abc import ABC, abstractmethod
 
 
@@ -44,7 +46,7 @@ class Card(ABC):
             'rarity': self.rarity
         }
 
-    def is_playable(self, available_mana: int):
+    def is_playable(self, available_mana: int) -> bool:
         """
         Verifica si la carta se puede jugar con el maná disponible.
 

@@ -1,3 +1,5 @@
+"""Module defining the CreatureCard class for creature cards in DataDeck."""
+
 from typing import Union
 from ex0.Card import Card
 
@@ -47,6 +49,11 @@ class CreatureCard(Card):
         return play_result
 
     def get_card_info(self) -> dict:
+        """
+        Devuelve la información completa de la carta de criatura.
+
+        :return: Diccionario con información de la carta incluyendo ataque y salud.
+        """
         return {
             'name': self.name,
             'cost': self.cost,

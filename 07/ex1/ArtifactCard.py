@@ -1,3 +1,5 @@
+"""Module defining the ArtifactCard class for artifact cards in DataDeck."""
+
 from ex0.Card import Card
 
 

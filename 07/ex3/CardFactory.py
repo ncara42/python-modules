@@ -20,7 +20,7 @@ class CardFactory(ABC):
         pass
 
     @abstractmethod
-    def create_creature(self, name_or_power):
+    def create_creature(self, name_or_power: str | int):
         """
         Método abstracto para crear una carta de criatura.
 
@@ -30,7 +30,7 @@ class CardFactory(ABC):
         pass
 
     @abstractmethod
-    def create_spell(self, name_or_power):
+    def create_spell(self, name_or_power: str | int):
         """
         Método abstracto para crear una carta de hechizo.
 
@@ -40,7 +40,7 @@ class CardFactory(ABC):
         pass
 
     @abstractmethod
-    def create_artifact(self, name_or_power):
+    def create_artifact(self, name_or_power: str | int):
         """
         Método abstracto para crear una carta de artefacto.
 
@@ -50,7 +50,7 @@ class CardFactory(ABC):
         pass
 
     @abstractmethod
-    def create_themed_deck(self, size: int):
+    def create_themed_deck(self, size: int) -> dict:
         """
         Método abstracto para crear un mazo temático.
 
@@ -60,7 +60,7 @@ class CardFactory(ABC):
         pass
 
     @abstractmethod
-    def get_supported_types(self):
+    def get_supported_types(self) -> dict:
         """
         Método abstracto para obtener los tipos de cartas soportados.
 

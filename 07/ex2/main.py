@@ -12,11 +12,17 @@ from ex2.Combatable import Combatable
 from ex2.Magical import Magical
 
 
-def list_methods(obj):
+def list_methods(obj: object) -> list[str]:
+    """
+    Returns a list of public methods from an object.
+
+    :param obj: Object to inspect.
+    :return: List of method names that don't start with underscore.
+    """
     return [method for method in dir(obj) if not method.startswith("_")]
 
 
-def main():
+def main() -> None:
     """
     Función principal que ejecuta la demostración del
     sistema de habilidades.

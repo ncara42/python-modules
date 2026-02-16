@@ -1,3 +1,5 @@
+"""Module for ex1 package containing ArtifactCard, SpellCard, and Deck classes."""
+
 from ex1.ArtifactCard import ArtifactCard
 from ex1.SpellCard import SpellCard
 from ex1.Deck import Deck

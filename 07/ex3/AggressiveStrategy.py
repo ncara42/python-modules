@@ -65,7 +65,16 @@ class AggressiveStrategy(GameStrategy):
         Returns:
             list: Lista de objetivos ordenados por prioridad.
         """
-        def get_priority(target):
+        def get_priority(target: dict) -> float:
+            """
+            Returns the priority value for a target based on health.
+
+            Args:
+                target (dict): Target to evaluate.
+
+            Returns:
+                float: Priority value.
+            """
             return target.get('health', float('inf'))
 
         return sorted(available_targets, key=get_priority)

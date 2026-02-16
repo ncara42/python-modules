@@ -7,7 +7,7 @@ from ex4.TournamentPlatform import TournamentPlatform
 from ex4.TournamentCard import TournamentCard
 
 
-def main():
+def main() -> None:
     """
     Función principal que configura y ejecuta la plataforma de torneos.
     Registra cartas, simula una partida y muestra el estado del torneo.
