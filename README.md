@@ -61,11 +61,6 @@ Creación y gestión de entornos virtuales, instalación de paquetes externos (p
 ### Módulo 09 - Validación de Datos
 Implementación de validación robusta con Pydantic, modelos de datos tipados, validadores personalizados y manejo de datos estructurados.
 
-## Requisitos
-
-- Python 3.10 o superior
-- pip (gestor de paquetes de Python)
-
 ## Uso
 
 Cada módulo contiene ejercicios independientes organizados en directorios `ex0`, `ex1`, etc. Para ejecutar un ejercicio:
