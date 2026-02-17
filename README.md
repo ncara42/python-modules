@@ -18,7 +18,7 @@ Introducción a la sintaxis básica de Python, tipos de datos, variables, funcio
 
 ---
 
-### Módulo 01 - Programación Orientada a Objetos
+### Módulo 01 - POO
 Clases, objetos, atributos, métodos, constructores y los principios básicos del paradigma orientado a objetos.
 
 ---
@@ -31,20 +31,32 @@ Try-except, tipos de excepciones, creación de excepciones personalizadas, bloqu
 ### Módulo 03 - Argumentos de Línea de Comandos
 Procesamiento de argumentos con `sys.argv`, validación de entrada y construcción de aplicaciones CLI interactivas.
 
+---
+
 ### Módulo 04 - Gestión de Archivos
 Operaciones de lectura y escritura de archivos, context managers, manipulación de rutas y gestión de recursos.
+
+---
 
 ### Módulo 05 - Programación Orientada a Objetos Avanzada
 Clases abstractas, polimorfismo, herencia múltiple, métodos especiales y patrones de diseño orientado a objetos.
 
+---
+
 ### Módulo 06 - Gestión de Paquetes y Módulos
 Importación de módulos, creación de paquetes, resolución de dependencias circulares y estructura de proyectos Python.
+
+---
 
 ### Módulo 07 - Herencia y Polimorfismo
 Implementación de jerarquías de clases, métodos abstractos, composición y principios SOLID aplicados a Python.
 
+---
+
 ### Módulo 08 - Entornos Virtuales y Dependencias
 Creación y gestión de entornos virtuales, instalación de paquetes externos (pandas, numpy, matplotlib, requests) y gestión de dependencias.
+
+---
 
 ### Módulo 09 - Validación de Datos
 Implementación de validación robusta con Pydantic, modelos de datos tipados, validadores personalizados y manejo de datos estructurados.
