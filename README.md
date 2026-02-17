@@ -2,7 +2,7 @@
 
 **Estudiante:** ncaravac  
 **Campus:** 42 Madrid, España <br>
-**Período:** Octubre - Noviembre 2025  
+**Período:** Enero 2025  
 **Lenguaje:** C  
 
 ---
