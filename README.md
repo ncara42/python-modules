@@ -16,11 +16,17 @@ Colección de módulos de Python que constituyen la base del nuevo currículum d
 ### Módulo 00 - Fundamentos
 Introducción a la sintaxis básica de Python, tipos de datos, variables, funciones simples y operaciones aritméticas fundamentales.
 
+---
+
 ### Módulo 01 - Programación Orientada a Objetos
 Clases, objetos, atributos, métodos, constructores y los principios básicos del paradigma orientado a objetos.
 
+---
+
 ### Módulo 02 - Manejo de Excepciones
 Try-except, tipos de excepciones, creación de excepciones personalizadas, bloques finally y gestión de errores.
+
+---
 
 ### Módulo 03 - Argumentos de Línea de Comandos
 Procesamiento de argumentos con `sys.argv`, validación de entrada y construcción de aplicaciones CLI interactivas.
@@ -56,8 +62,6 @@ Cada módulo contiene ejercicios independientes organizados en directorios `ex0`
 cd 00/ex0
 python ft_hello_garden.py
 ```
-
----
 
 ## Información de Contacto
 
