@@ -1,4 +1,4 @@
-## Módulos Python
+# Módulos Python
 
 **Estudiante:** ncaravac  
 **Campus:** 42 Madrid, España <br>
@@ -57,10 +57,13 @@ cd 00/ex0
 python ft_hello_garden.py
 ```
 
-## Objetivo Pedagógico
+---
 
-Este currículum proporciona una formación completa en Python, desde conceptos básicos hasta técnicas avanzadas de desarrollo profesional, preparando a los estudiantes para proyectos reales en entornos de producción.
+## Información de Contacto
 
-## Licencia
+**GitHub:** [ncara42](https://github.com/ncara42)  
+**42 Network:** [42 Madrid](https://www.42madrid.com/)
 
-Este proyecto es parte del currículum educativo de 42 Network.
+---
+
+*Documento para fines de portfolio profesional. Todos los ejercicios fueron completados de forma individual siguiendo la normativa y valores de 42.*
