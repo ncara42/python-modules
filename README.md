@@ -1,4 +1,11 @@
-Módulos Python
+## Módulos Python
+
+**Estudiante:** ncaravac  
+**Campus:** 42 Madrid, España <br>
+**Período:** Octubre - Noviembre 2025  
+**Lenguaje:** C  
+
+---
 
 ## Descripción
 
